@@ -11,17 +11,20 @@ public class Main {
     public static void main(String[] args) {
         Random random = new Random();
 
-        int a = random.nextInt(25);
-        int b = random.nextInt(25);
+        int[] a = new int[25];
 
-        if (a > b){
-            System.out.println(a + " > " + b);
-        }
-        else if (a < b){
-            System.out.println(a + " < " + b);
-        }
-        else{
-            System.out.println(a + " = " + b);
+        for (int i = 0; i < a.length; i++){
+            a[i] = random.nextInt(100);
+            int b = random.nextInt(100);
+            if (a[i] > b){
+                System.out.println(a[i] + " > " + b);
+            }
+            else if (a[i] < b){
+                System.out.println(a[i] + " < " + b);
+            }
+            else{
+                System.out.println(a[i] + " = " + b);
+            }
         }
     }
 }
